@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CodeCanvas AI Design System - Modern glassmorphism with AI-focused gradients */
+
+@layer base {
+  :root {
+    /* Dark mode first - AI/Tech aesthetic */
+    --background: 220 27% 4%;
+    --background-secondary: 220 25% 6%;
+    --foreground: 220 15% 95%;
+
+    /* Glass morphism surfaces */
+    --glass: 220 25% 8%;
+    --glass-border: 220 25% 15%;
+    --glass-hover: 220 25% 10%;
+
+    /* AI-themed gradients */
+    --primary: 255 75% 60%;
+    --primary-glow: 255 85% 70%;
+    --primary-foreground: 220 27% 4%;
+
+    --secondary: 270 75% 60%;
+    --secondary-glow: 270 85% 70%;
+    --secondary-foreground: 220 15% 95%;
+
+    /* Accent colors */
+    --accent: 200 75% 60%;
+    --accent-glow: 200 85% 70%;
+    --accent-foreground: 220 27% 4%;
+
+    /* Status colors */
+    --success: 142 76% 50%;
+    --warning: 38 92% 50%;
+    --destructive: 0 84% 60%;
+    --muted: 220 15% 25%;
+    --muted-foreground: 220 15% 60%;
+
+    /* Interactive elements */
+    --border: 220 25% 15%;
+    --input: 220 25% 8%;
+    --ring: 255 75% 60%;
+    
+    /* Canvas-specific */
+    --canvas-bg: 220 25% 5%;
+    --canvas-grid: 220 25% 8%;
+    --canvas-dropzone: 255 75% 60%;
+
+    --radius: 12px;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--secondary-glow)));
+    --gradient-glass: linear-gradient(135deg, 
+      hsl(var(--glass) / 0.8), 
+      hsl(var(--glass) / 0.4));
+    
+    /* Shadows */
+    --shadow-glass: 0 8px 32px 0 hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    --shadow-component: 0 4px 16px 0 hsl(220 25% 8% / 0.5);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Glassmorphism utilities */
+  .glass {
+    background: hsl(var(--glass) / 0.8);
+    border: 1px solid hsl(var(--glass-border) / 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-hover {
+    transition: var(--transition-smooth);
+  }
+
+  .glass-hover:hover {
+    background: hsl(var(--glass-hover) / 0.9);
+    border-color: hsl(var(--primary) / 0.3);
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Grid pattern for canvas */
+  .canvas-grid {
+    background-image: 
+      linear-gradient(hsl(var(--canvas-grid) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--canvas-grid) / 0.5) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Glow effects */
+  .btn-glow {
+    box-shadow: 0 0 20px hsl(var(--primary-glow) / 0.4);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--primary-glow) / 0.6);
+    transform: translateY(-1px);
+  }
+
+  /* Component drop zones */
+  .drop-zone {
+    border: 2px dashed hsl(var(--border));
+    background: hsl(var(--canvas-bg));
+    transition: var(--transition-smooth);
+  }
+
+  .drop-zone.active {
+    border-color: hsl(var(--canvas-dropzone));
+    background: hsl(var(--canvas-dropzone) / 0.1);
+    box-shadow: 0 0 20px hsl(var(--canvas-dropzone) / 0.3);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background-secondary));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.7);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
