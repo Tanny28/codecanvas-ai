@@ -5,9 +5,8 @@
 
 **AI-powered website builder that generates production-ready code and deploys instantly**
 
-[![Live Demo](https://img.shields.io/badge/🔗_Live_Demo-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](YOUR_DEPLOYMENT_URL)
+[![Live Demo](https://img.shields.io/badge/🔗_Live_Demo-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://codecanvas-ai-brown.vercel.app/)
 [![Demo Video](https://img.shields.io/badge/🎬_Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUR_VIDEO_URL)
-[![Deploy](https://img.shields.io/badge/🚀_Deploy_Now-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/codecanvas-ai)
 
 ![Demo GIF](screenshots/demo.gif)
 
